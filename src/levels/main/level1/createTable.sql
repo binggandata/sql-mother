@@ -10,7 +10,7 @@ create table if not exists `student`
 );
 
 insert into `student` (`name`, `age`, `class_id`, `score`, `exam_num`)
-values ('鸡哥', 25, 1, 2.5, 1);
+values ('饼干哥哥', 25, 1, 2.5, 1);
 insert into `student` (`name`, `age`, `class_id`, `score`, `exam_num`)
 values ('鱼皮', 18, 1, 400, 4);
 insert into `student` (`name`, `age`, `class_id`, `score`, `exam_num`)
