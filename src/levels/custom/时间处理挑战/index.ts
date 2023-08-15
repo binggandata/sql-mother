@@ -14,6 +14,6 @@ export default {
     "    strftime('%Y', 'now') -  strftime('%Y', s_birth) as '年龄'\n" +
     "FROM \n" +
     "    student",
-  hint: "年龄计算按今年年份减去出生年份",
+  hint: "sqlite中，转化时间用strftime",
   type: "custom",
 } as LevelType;

@@ -24,6 +24,7 @@
               数据分析学习
             </a>
           </a-menu-item>
+          <a-menu-item>饼干哥哥微信号：binggandata</a-menu-item>
         </a-menu>
       </a-col>
     </a-row>
@@ -32,7 +33,8 @@
     </div>
     <div class="wechat-btn">
       <a-button shape="circle" size="large" @click="showModal"><wechat-outlined /></a-button>
-      <a-modal v-model:visible="visible" title="Basic Modal" @ok="handleOk">
+      <a-modal v-model:visible="visible" title="找饼干哥哥玩" @ok="handleOk">
+        <p>关注饼干哥哥公众号，学习更多数据分析知识。</p>
         <img src="./assets/mp.jpg" alt="饼干哥哥数据分析公众号" />
       </a-modal>
     </div>
@@ -110,16 +112,16 @@ const handleOk = (e: MouseEvent) => {
 
 .footer {
   padding: 12px;
-  text-align: center;
+  text-align: right;
   background: #efefef;
 }
 
 
 .wechat-btn {
   position: fixed;
-  right: 5%;
+  right: 3%;
   transform: translateX(50%);
-  bottom: 50%;
+  top: 1%;
   width: 100px;
   height: 100px;
   border-radius: 25px;
@@ -131,8 +133,8 @@ const handleOk = (e: MouseEvent) => {
 }
 
 .wechat-btn img {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
 }
 
 </style>
