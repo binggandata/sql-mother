@@ -11,7 +11,7 @@ export default {
     "SELECT \n" +
     "    s_id,\n" +
     "    s_name,\n" +
-    "    (DATE_FORMAT(NOW(),'%Y')-DATE_FORMAT(s_birth,'%Y') as '年龄'\n" +
+    "    strftime('%Y', 'now') -  strftime('%Y', s_birth) as '年龄'\n" +
     "FROM \n" +
     "    student",
   hint: "年龄计算按今年年份减去出生年份",
