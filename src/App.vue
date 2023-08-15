@@ -4,8 +4,8 @@
       <a-col flex="160px" style="margin: 0 auto">
         <RouterLink to="/">
           <a-row align="middle">
-            <img src="./assets/logo.png" alt="快打SQL" class="logo" />
-            <span class="title">快打SQL</span>
+            <img src="./assets/logo.png" alt="SQL快打" class="logo" />
+            <span class="title">SQL快打</span>
           </a-row>
         </RouterLink>
       </a-col>
@@ -29,7 +29,14 @@
     </a-row>
     <div class="content">
       <router-view />
-      <FloatButton />
+      <div>
+        <a-button type="primary" @click="showModal">Open Modal</a-button>
+        <a-modal v-model:visible="visible" title="Basic Modal" @ok="handleOk">
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+        </a-modal>
+    </div>
     </div>
     <div class="footer">
       网站开源作者：
@@ -39,9 +46,9 @@
   </div>
 </template>
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, ref } from "vue";
 import { useRoute, useRouter } from "vue-router";
-import { FloatButton } from "ant-design-vue";
+
 
 const route = useRoute();
 const router = useRouter();
@@ -58,6 +65,22 @@ const doClickMenu = ({ key }: any) => {
     });
   }
 };
+
+
+
+const visible = ref<boolean>(false);
+
+const showModal = () => {
+  visible.value = true;
+};
+
+const handleOk = (e: MouseEvent) => {
+  console.log(e);
+  visible.value = false;
+};
+
+
+
 </script>
 <style scoped>
 .header {
