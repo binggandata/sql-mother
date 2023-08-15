@@ -29,14 +29,14 @@
     </a-row>
     <div class="content">
       <router-view />
-      <div>
-        <a-button type="primary" @click="showModal">Open Modal</a-button>
-        <a-modal v-model:visible="visible" title="Basic Modal" @ok="handleOk">
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        </a-modal>
     </div>
+    <div class="wechat-btn">
+      <a-button shape="circle" size="large" @click="showModal"><wechat-outlined /></a-button>
+      <a-modal v-model:visible="visible" title="Basic Modal" @ok="handleOk">
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+      </a-modal>
     </div>
     <div class="footer">
       网站开源作者：
@@ -48,6 +48,10 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { useRoute, useRouter } from "vue-router";
+
+import {
+  WechatOutlined,
+} from '@ant-design/icons-vue';
 
 
 const route = useRoute();
@@ -111,4 +115,9 @@ const handleOk = (e: MouseEvent) => {
   text-align: center;
   background: #efefef;
 }
+
+.wechat-btn{
+
+}
+
 </style>
