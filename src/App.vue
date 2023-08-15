@@ -33,9 +33,7 @@
     <div class="wechat-btn">
       <a-button shape="circle" size="large" @click="showModal"><wechat-outlined /></a-button>
       <a-modal v-model:visible="visible" title="Basic Modal" @ok="handleOk">
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
+        <img src="./assets/mp.jpg" alt="饼干哥哥数据分析公众号" />
       </a-modal>
     </div>
     <div class="footer">
@@ -116,8 +114,25 @@ const handleOk = (e: MouseEvent) => {
   background: #efefef;
 }
 
-.wechat-btn{
 
+.wechat-btn {
+  position: fixed;
+  right: 5%;
+  transform: translateX(50%);
+  bottom: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 25px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.wechat-btn img {
+  width: 80px;
+  height: 80px;
 }
 
 </style>
