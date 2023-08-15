@@ -18,7 +18,17 @@
         >
           <a-menu-item key="/learn">学习</a-menu-item>
           <a-menu-item key="/levels">关卡</a-menu-item>
-          <a-menu-item key="/playground">广场</a-menu-item>
+          <!-- <a-menu-item key="/playground">广场</a-menu-item> -->
+          <a-menu-item>
+            <a href="http://ai.bggg.tech/sql" target="_blank">
+              AI写SQL
+            </a>
+          </a-menu-item>
+          <a-menu-item>
+            <a href="http://ai.bggg.tech/chatsql" target="_blank">
+              AI数据库老师
+            </a>
+          </a-menu-item>
           <a-menu-item>
             <a href="https://www.qschatdata.tech" target="_blank">
               数据分析学习
