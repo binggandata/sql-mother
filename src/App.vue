@@ -29,6 +29,7 @@
     </a-row>
     <div class="content">
       <router-view />
+      <FloatButton />
     </div>
     <div class="footer">
       网站开源作者：
@@ -40,9 +41,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useRoute, useRouter } from "vue-router";
-import {
-  GithubOutlined,
-} from '@ant-design/icons-vue';
+import { FloatButton } from "ant-design-vue";
 
 const route = useRoute();
 const router = useRouter();
